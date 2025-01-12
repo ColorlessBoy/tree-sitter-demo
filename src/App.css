@@ -1,0 +1,134 @@
+#root {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.app-container {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.editor-container {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #333;
+  border-radius: 4px;
+}
+
+.ast-container {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.ast-display {
+  flex: 1;
+  overflow: auto;
+  white-space: pre;
+  text-align: left;
+  font-family: monospace;
+  background-color: #f5f5f5;
+  padding: 1rem;
+  border-radius: 4px;
+  margin: 0;
+}
+
+h2 {
+  margin-bottom: 1rem;
+  color: #646cff;
+}
+
+.loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  color: #646cff;
+}
+
+.loading-spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid #646cff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 1rem;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.ast-node {
+  cursor: pointer;
+  padding: 1px 2px;
+  border-radius: 3px;
+}
+
+.ast-node:hover {
+  background-color: #e3f2fd;
+}
+
+.highlighted-code {
+  background-color: #e3f2fd;
+  border-radius: 2px;
+}
+
+.error-node {
+  background-color: #ffebee;
+  border-left: 2px solid #ef5350;
+}
+
+.missing-node {
+  background-color: #fff3e0;
+  border-left: 2px solid #ff9800;
+}
+
+.error-mark {
+  color: #d32f2f;
+  font-size: 12px;
+  margin-left: 4px;
+}
